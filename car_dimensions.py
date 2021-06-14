@@ -60,6 +60,11 @@ scaled_x = [i * x_scaling_factor for i in x]
 scaled_y = [i * y_scaling_factor for i in y]
 scaled_z = [i * z_scaling_factor for i in z]
 
+print("\nLengths after scaling are:")
+print("Along X:", max(scaled_x)-min(scaled_x))
+print("Along Y:", max(scaled_y)-min(scaled_y))
+print("Along Z:", max(scaled_z)-min(scaled_z))
+
 print("\nThe keypoints with co-ordinates scaled are:")
 
 for i in range(14):
