@@ -5,6 +5,8 @@ This takes the co-ordinates as input and tells the avg width, length and height 
 '''
 
 # 14x3 matrix representing (x,y,z) of the keypoints
+# These have been written in form of lists later on
+
 # 2.5447 -3.7577 -1.5125
 # -3.0188 -3.8300 -1.5128
 # 2.2950 3.4357 -1.2746
@@ -43,7 +45,6 @@ z_length = max_z-min_z
 print("\nMin coordinate along z is "+str(min_z))
 print("Max coordinate along z is "+str(max_z))
 print("Length along z is "+str(z_length))
-print()
 
 avg_width = 1.6362
 avg_length = 3.8600
@@ -53,4 +54,15 @@ x_scaling_factor = avg_width/x_length
 y_scaling_factor = avg_length/y_length
 z_scaling_factor = avg_height/z_length
 
-print("Scaling factors are", x_scaling_factor, y_scaling_factor, z_scaling_factor, '\n')
+print("\nScaling factors are", x_scaling_factor, y_scaling_factor, z_scaling_factor)
+
+scaled_x = [i * x_scaling_factor for i in x]
+scaled_y = [i * y_scaling_factor for i in y]
+scaled_z = [i * z_scaling_factor for i in z]
+
+print("\nThe keypoints with co-ordinates scaled are:")
+
+for i in range(14):
+    print(scaled_x[i], scaled_y[i], scaled_z[i], ';')
+
+print()
