@@ -1,3 +1,4 @@
+
 function [] = visualizeWireframe3D(wireframe)
 % VISUALIZEWIREFRAME3D  Takes in a 3D car wireframe (3 x 14 matrix), and
 % plots it in 3D while appropriately connecting vertices
