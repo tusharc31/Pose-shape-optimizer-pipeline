@@ -1,7 +1,7 @@
 '''
 A set of 14 vectors was provided to us representing the keypoints on the car.
 In this system, x axis was along the width, y-axis was along the length and z axis was along the height.
-This takes the co-ordinates as input and tells the avg width, length and height for the same.
+This code takes the co-ordinates as input and tells the avg width, length and height for the same.
 '''
 
 # 14x3 matrix representing (x,y,z) of the keypoints
@@ -46,6 +46,9 @@ print("\nMin coordinate along z is "+str(min_z))
 print("Max coordinate along z is "+str(max_z))
 print("Length along z is "+str(z_length))
 
+'''
+This are the standard average lengths to which we will scale our keypoints
+'''
 avg_width = 1.6362
 avg_length = 3.8600
 avg_height = 1.5208
@@ -65,7 +68,10 @@ print("Along X:", max(scaled_x)-min(scaled_x))
 print("Along Y:", max(scaled_y)-min(scaled_y))
 print("Along Z:", max(scaled_z)-min(scaled_z))
 
-print("\nThe keypoints with co-ordinates scaled are:")
+print("\nThe keypoints with co-ordinates scaled are:\n")
+
+# for i in range(14):
+#     print(x[i], y[i], z[i], ';')
 
 for i in range(14):
     print(scaled_x[i], scaled_y[i], scaled_z[i], ';')
