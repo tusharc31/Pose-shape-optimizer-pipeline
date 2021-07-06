@@ -12,7 +12,7 @@ groundTruth = [];
 
 cd devkit_object/matlab;
 % size(seqs, 2)
-for idx = 1:size(seqs, 2)
+for idx = 1:1
     
     tracklet = readLabels(label_dir, seqs(idx));
 %     display(tracklet);
@@ -35,7 +35,7 @@ for idx = 1:size(seqs, 2)
     groundTruth = [groundTruth; truthInfo];
 end
 
-display(objsInfo);
+% display(objsInfo);
 display(groundTruth);
 cd ..;
 cd ..;
