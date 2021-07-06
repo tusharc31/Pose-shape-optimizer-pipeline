@@ -1,3 +1,4 @@
+function [rot_wireframe, rot_defomationvecs] = kitti_rotation()
 % In original co-oridnate system given:
 % positive x-axis = left of the car
 % positive y-axis = front of the car
@@ -16,14 +17,31 @@
 % about the z-axis and then 90° anti-clockwise about the x-axis.
 
 % Rotation matrix for 180° anti-clockwise rotation about Z:
-% rz = [-1 0 0; 0 -1 0; 0 0 1]
+rz = [-1 0 0; 0 -1 0; 0 0 1];
 % Rotation matrix for 90° anti-clockwise rotation about X:
-% rx = [1 0 0; 0 0 -1; 0 1 0]
+rx = [1 0 0; 0 0 -1; 0 1 0];
 % Final rotation matrix comes out to be:
-% [-1 0 0; 0 0 -1; 0 -1 0]
+r=rx*rz;
 
 % New co-orinates will be equal to:
 % Rotation Matrix * Current Wireframe
+
+wireframe = (load('meanShape_scaled.txt'))';
+defomationvecs = load('vectors.txt');
+
+% display(r);
+% display(wireframe);
+rot_wireframe = r*wireframe;
+
+rot_defomationvecs = [];
+
+for i = 1:size(defomationvecs, 1)
+    temp = reshape(defomationvecs(i, :), [3, 14]);
+    temp = r * temp;
+    rot_defomationvecs(i, :) = reshape(temp, [1, 42]);
+end
+
+
 
 % Required co-ordinates are:
 %    -0.7157    0.6518    1.2912
