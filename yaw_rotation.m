@@ -1,3 +1,10 @@
+% Uncomment these lines to test this code with the 9_42 image
+% function [rot_wireframe, rot_defomationvecs] = yaw_rotation()
+% offset = 90;
+% ry = 3.1 + offset * pi / 180;
+% wireframe = (load('meanShape_scaled.txt'))';
+% defomationvecs = load('vectors.txt');
+
 function [rot_wireframe, rot_defomationvecs] = yaw_rotation(trackletInfo, wireframe, defomationvecs)
 
 offset = 90;
@@ -16,3 +23,5 @@ for i = 1:size(defomationvecs, 1)
     temp = r * temp;
     rot_defomationvecs(i, :) = reshape(temp, [1, 42]);
 end
+
+visualizeWireframe3D(rot_wireframe)
