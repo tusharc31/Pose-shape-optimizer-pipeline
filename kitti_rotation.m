@@ -18,8 +18,10 @@ function [rot_wireframe, rot_defomationvecs] = kitti_rotation()
 
 % Rotation matrix for 180° anti-clockwise rotation about Z:
 rz = [-1 0 0; 0 -1 0; 0 0 1];
+
 % Rotation matrix for 90° anti-clockwise rotation about X:
 rx = [1 0 0; 0 0 -1; 0 1 0];
+
 % Final rotation matrix comes out to be:
 r=rx*rz;
 
@@ -34,6 +36,8 @@ defomationvecs = load('vectors.txt');
 rot_wireframe = r*wireframe;
 
 rot_defomationvecs = [];
+
+% display(size(defomationvecs, 1));
 
 for i = 1:size(defomationvecs, 1)
     temp = reshape(defomationvecs(i, :), [3, 14]);
