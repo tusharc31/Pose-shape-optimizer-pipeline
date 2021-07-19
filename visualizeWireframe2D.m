@@ -1,4 +1,4 @@
-function [] = visualizeWireframe2D(img, wireframe)
+function [] = visualizeWireframe2D(img, wireframe, seq, frm)
 % VISUALIZEWIREFRAME2D  Takes in a 2D car wireframe (2 x 14 matrix), and
 % plots it in 2D (on a given image) while appropriately connecting vertices
 
@@ -137,7 +137,13 @@ end
 % plot3(wireframe(1,[10,6]), wireframe(2,[10,6]), wireframe(3,[10,6]));
 
 % Plot title
-title('2D Projection of the Car Wireframe');
+titleid = '2D Projection of the Car Wireframe for the image - ';
+titleid = strcat(titleid, ' ');
+titleid = strcat(titleid, num2str(seq));  
+titleid = strcat(titleid, '_');  
+titleid = strcat(titleid, num2str(frm));  
+titleid = strcat(titleid, '.png'); 
+title(titleid, 'Interpreter', 'none');
 
 hold off;
 

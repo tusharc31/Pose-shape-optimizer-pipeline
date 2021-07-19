@@ -28,7 +28,7 @@ r=rx*rz;
 % New co-orinates will be equal to:
 % Rotation Matrix * Current Wireframe
 
-wireframe = (load('meanShape_scaled.txt'))';
+wireframe = (load('rotated_meanShape.txt'))';
 defomationvecs = load('vectors.txt');
 
 % display(r);
