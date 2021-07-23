@@ -1,5 +1,8 @@
 function [] = imgPlot(trackletInfo, pts, flag)
 
+% Take trackletsInfo from tracklets_info.m
+% Take pts from keypoints.m
+
 for i = 1:size(trackletInfo, 1)
 	title = sprintf('%.0f,' , trackletInfo(i, 1:3));
 	title = title(1:end - 1);      % strip final comma
