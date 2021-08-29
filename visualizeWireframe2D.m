@@ -137,7 +137,7 @@ end
 % plot3(wireframe(1,[10,6]), wireframe(2,[10,6]), wireframe(3,[10,6]));
 
 % Plot title
-titleid = '2D Projection of the Car Wireframe for the image - ';
+titleid = '2D Projection after pose adjustment for the image - ';
 titleid = strcat(titleid, ' ');
 titleid = strcat(titleid, num2str(seq));  
 titleid = strcat(titleid, '_');  
