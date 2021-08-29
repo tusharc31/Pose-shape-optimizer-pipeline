@@ -18,5 +18,5 @@ for i = 1:size(trackletInfo, 1)
 	err = [err; abs(B' - groundTruth(i, 4:6))];
 end
 
-display(predicted);
-display(err);
+%display(predicted);
+%display(err);
