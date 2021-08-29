@@ -8,6 +8,7 @@ k = [721.53,0,609.55;0,721.53,172.85;0,0,1]; %Camera Intrinsics
 
 for i = 1:size(translation, 1)
     R = reshape(rotation(i,:), [3,3]);
+    % pose_opt_wireframe = (R * finalWireFrames(3*i-2:3*i,:)) + translation(i,:)';
     pose_opt_wireframe = (R * finalWireFrames(3*i-2:3*i,:)) + translation(i,:)';
     pose_opt_wireframe = k*pose_opt_wireframe;
     pose_opt_wireframe_img = [pose_opt_wireframe(1,:) ./ pose_opt_wireframe(3,:); pose_opt_wireframe(2,:) ./ pose_opt_wireframe(3,:)];
