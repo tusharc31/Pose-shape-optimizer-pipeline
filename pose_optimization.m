@@ -13,7 +13,7 @@ views = 1;
 pts = 14;
 obs = 14;
 
-avgDims = [1.5208 1.6362 3.86]; %circshift([1.6362, 3.8600, 1.5208], [0, 1]);
+avgDims = [1.5208 1.6362 3.86];
 K = [721.53,0,609.55;0,721.53,172.85;0,0,1];
 lambda = [0.250000 0.270000 0.010000 -0.080000 -0.050000];
 [trans, ~] = mobili_formula();
@@ -37,17 +37,13 @@ for i = 1:size(trans, 1)
 
 	fprintf(file, '%f %f %f %f %f\n', lambda);
 	fclose(file);
-
-	%cmd = 'cd ./ceres; ./singleViewPoseAdjuster; cd -';
     cmd = 'cd ./ceres; ./singleViewPoseAdjuster; cd $OLDPWD';
 	system(cmd);
-
 	data = importdata('./ceres/ceres_output_singleViewPoseAdjuster.txt');
 	rotParams = data(1:9);
 	transParams = data(10:12);
 	R = reshape(rotParams, [3 3]);
 	poseFrame = (R * alignedFrames(3 * i - 2:3 * i, :)) + transParams;
-
 	translation = [translation; transParams'];
 	rotation = [rotation; rotParams'];
 	poseFrames = [poseFrames; poseFrame];
