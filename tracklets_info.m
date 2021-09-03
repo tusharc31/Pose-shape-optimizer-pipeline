@@ -1,4 +1,4 @@
-function [objsInfo, groundTruth] = tracklets_info()
+function [trackletInfo, groundTruth] = tracklets_info()
 
 % objsInfo is the 6x8 matrix we were required to find
 % groundTruth is the actual location (in metres)
@@ -11,7 +11,7 @@ seq = [ 2,10,  4,  8, 2, 9]; %Sequences
 frm = [98, 1,197,126,90,42]; %frames
 id  = [ 1, 0, 20, 12, 1, 1]; %CarID's
 
-objsInfo = [];
+trackletInfo = [];
 groundTruth = [];
 
 % Changing path to use readLabels.m
@@ -43,7 +43,7 @@ for idx = 1:size(seq, 2)
         end
     end
     
-    objsInfo = [objsInfo; info];
+    trackletInfo = [trackletInfo; info];
     groundTruth = [groundTruth; truthInfo];
 end
 

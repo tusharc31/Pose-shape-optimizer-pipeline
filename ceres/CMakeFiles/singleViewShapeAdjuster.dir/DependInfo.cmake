@@ -4,18 +4,18 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/ys/rrc/PoseShapeOptimization/ceres/singleViewShapeAdjuster.cc" "/home/ys/rrc/PoseShapeOptimization/ceres/CMakeFiles/singleViewShapeAdjuster.dir/singleViewShapeAdjuster.cc.o"
+  "/home/tushar/Desktop/RRC/Pose-shape-optimizer-pipeline/ceres/singleViewShapeAdjuster.cc" "/home/tushar/Desktop/RRC/Pose-shape-optimizer-pipeline/ceres/CMakeFiles/singleViewShapeAdjuster.dir/singleViewShapeAdjuster.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # Preprocessor definitions for this target.
 set(CMAKE_TARGET_DEFINITIONS_CXX
+  "CERES_EXPORT_INTERNAL_SYMBOLS"
   "GFLAGS_IS_A_DLL=0"
   )
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/usr/local/include"
   "/usr/include/eigen3"
   )
 

@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/singleViewShapeAdjuster.dir/singleViewShapeAdjuster.cc.o"
-  "singleViewShapeAdjuster.pdb"
   "singleViewShapeAdjuster"
+  "singleViewShapeAdjuster.pdb"
 )
 
 # Per-language clean rules from dependency scanning.
