@@ -1,0 +1,40 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/tusharc31/Desktop/RRC/Pose-shape-optimizer-pipeline/ceres/costFunctions.hpp
+ceres/ceres.h
+-
+ceres/rotation.h
+-
+
+/home/tusharc31/Desktop/RRC/Pose-shape-optimizer-pipeline/ceres/problemStructs.hpp
+ceres/ceres.h
+-
+ceres/rotation.h
+-
+
+/home/tusharc31/Desktop/RRC/Pose-shape-optimizer-pipeline/ceres/singleViewShapeAdjuster.cc
+cmath
+-
+cstdio
+-
+fstream
+-
+iostream
+-
+ceres/loss_function.h
+-
+ceres/iteration_callback.h
+-
+ceres/rotation.h
+-
+problemStructs.hpp
+/home/tusharc31/Desktop/RRC/Pose-shape-optimizer-pipeline/ceres/problemStructs.hpp
+costFunctions.hpp
+/home/tusharc31/Desktop/RRC/Pose-shape-optimizer-pipeline/ceres/costFunctions.hpp
+

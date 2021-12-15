@@ -1,0 +1,8 @@
+label_path = /scratch/ragaram/keypoint_network/eval_images/devkit_tracking/python/data/tracking/label_02
+test_input_path = /scratch/ragaram/keypoint_network/eval_images/
+model_weights   = /scratch/ragaram/keypoint_network/hour_glass/model.pth
+stacks = 8
+blocks = 1
+depth = 4
+classes = 14
+output_res = 64

@@ -1,0 +1,17 @@
+is_train = -1
+is_evaluate = 1
+is_test = -1
+lr = 0.00025                                           
+epochs = 100
+batch_size = 6
+data_set_path = /scratch/ragaram/keypoint_network/train_actual_small/
+eval_input_path = /scratch/ragaram/keypoint_network/eval_images/
+eval_output_path = /scratch/ragaram/keypoint_network/eval_output/
+model_weights   = /scratch/ragaram/keypoint_network/hour_glass/model.pth
+stacks = 8
+blocks = 1
+depth = 4
+classes = 14
+output_res = 64
+checkpoint  = checkpoint
+snapshot    = 10000
