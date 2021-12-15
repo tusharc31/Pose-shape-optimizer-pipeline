@@ -1,4 +1,0 @@
-/home/tushar/Desktop/RRC/Pose-shape-optimizer-pipeline/ceres/CMakeFiles/edit_cache.dir
-/home/tushar/Desktop/RRC/Pose-shape-optimizer-pipeline/ceres/CMakeFiles/rebuild_cache.dir
-/home/tushar/Desktop/RRC/Pose-shape-optimizer-pipeline/ceres/CMakeFiles/singleViewShapeAdjuster.dir
-/home/tushar/Desktop/RRC/Pose-shape-optimizer-pipeline/ceres/CMakeFiles/singleViewPoseAdjuster.dir
